@@ -2,7 +2,7 @@
 	
 	// Config
 	// Go to https://github.com/nehalvpatel/cgui for instructions
-	$timezone = "America/Chicago";
+	$timezone = "GMT";
 	date_default_timezone_set($timezone);
 	
 	$rig = array(
