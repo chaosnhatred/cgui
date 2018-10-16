@@ -6,9 +6,9 @@
 	date_default_timezone_set($timezone);
 	
 	$rig = array(
-		"Name" => "",
-		"Address" => "",
-		"Port" => ""
+		"Name" => "localhost",
+		"Address" => "127.0.0.1",
+		"Port" => "4028"
 	);
 	
 	$config = array(
