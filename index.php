@@ -4,12 +4,13 @@
 	// Go to https://github.com/nehalvpatel/cgui for instructions
 	$timezone = "GMT";
 	date_default_timezone_set($timezone);
-	
-	$rig = array(
-		"Name" => "localhost",
-		"Address" => "127.0.0.1",
-		"Port" => "4028"
-	);
+
+    $hostname = `hostname`;
+    $rig = array(
+        "Name" => $hostname,
+        "Address" => "127.0.0.1",
+        "Port" => "4028"
+    );
 	
 	$config = array(
 		"Temperature" => array(80, 84),
@@ -65,7 +66,7 @@
 	</head>
 	<body>
 		<div class="container" id="no-more-tables">
-			<h1 class="info-header page-title" style=""><?php if (isset($rig["Name"]) && !empty($rig["Name"])) { echo $rig["Name"]; } else { echo $rig["Address"] . ":" . $rig["Port"]; } ?></h1>
+			<h1 class="info-header page-title" style="">Miner Id: <?php if (isset($rig["Name"]) && !empty($rig["Name"])) { echo $rig["Name"]; } else { echo $rig["Address"] . ":" . $rig["Port"]; } ?></h1>
 			<hr>
 			<h1 class="info-header">Stats</h1>
 			<div class="well well-small info-block">
